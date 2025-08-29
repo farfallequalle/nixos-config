@@ -55,8 +55,8 @@
             warning = 30;
             critical = 1;
           };
-          format = "{icon} {capacity}%";
-          format-charging = " {capacity}%";
+          format = "{icon}  {capacity}%";
+          format-charging = "  {capacity}%";
           format-alt = "{time} {icon}";
           format-icons = ["" "" "" "" ""];
         };
