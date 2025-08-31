@@ -9,5 +9,7 @@
     ./net.nix
     ./timezone.nix
     ./nix.nix
+    ./hyprland.nix
+    ./keymap.nix
   ];
 }

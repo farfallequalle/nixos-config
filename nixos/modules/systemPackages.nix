@@ -5,4 +5,7 @@ environment.systemPackages = with pkgs; [
     git
     brave
   ];
+
+nixpkgs.config.allowUnfree = true;
+
 }
