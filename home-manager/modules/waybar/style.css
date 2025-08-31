@@ -44,29 +44,24 @@ window#waybar {
 #pulseaudio {
   margin: 0;
   color: #689d6a;
-  border-bottom: 5px solid #689d6a;
 }
 
 #pulseaudio.muted {
   padding: 0 20px;
   color: #cc241d;
-  border-bottom: 5px solid #cc241d;
 }
 
 #battery {
   margin: 0;
   color: #458588;
-  border-bottom: 5px solid #458588;
 }
 
 #clock {
   margin: 0;
   color: #b16286;
-  border-bottom: 5px solid #b16286;
 }
 
 #tray {
   margin: 0;
   color: #d65d0e;
-  border-bottom: 5px solid #d65d0e;
 }
