@@ -12,6 +12,5 @@
     ./hyprland.nix
     ./keymap.nix
     ./fish.nix
-    ./neovim.nix
   ];
 }

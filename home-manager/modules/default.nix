@@ -4,5 +4,6 @@ imports = [
   ./lazygit.nix
   ./waybar
   ./wofi.nix
+  ./neovim.nix
   ];
 }
