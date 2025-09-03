@@ -5,5 +5,6 @@ imports = [
   ./waybar
   ./wofi.nix
   ./neovim.nix
+  ./fish.nix
   ];
 }
