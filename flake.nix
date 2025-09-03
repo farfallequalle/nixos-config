@@ -3,13 +3,17 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    mnw.url = "github:Gerg-L/mnw";
   };
 
   outputs = inputs @ {
     nixpkgs,
     home-manager,
+    mnw,
     ...
   }: {
     nixosConfigurations = {
@@ -23,8 +27,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.farfallequalle = import ./home-manager/home.nix;
-	    home-manager.backupFileExtension = "backup";
+	    home-manager.users.farfallequalle = import ./home-manager/home.nix;
           }
           (
             {

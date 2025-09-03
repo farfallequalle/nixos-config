@@ -1,5 +1,5 @@
-{ pkgs, ... }: {
-  home.packages = with pkgs; [
+{ pkgs, ...}: {
+  home.packages = with pkgs; [ 
     ripgrep
     vesktop
     pavucontrol
@@ -7,4 +7,4 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     ];
-}
+    }
