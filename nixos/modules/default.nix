@@ -11,6 +11,6 @@
     ./nix.nix
     ./hyprland.nix
     ./keymap.nix
-    ./fish.nix
+    ./shell.nix
   ];
 }
