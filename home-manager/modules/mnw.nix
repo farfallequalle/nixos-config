@@ -2,8 +2,10 @@
   programs.mnw = {
     enable = true;
     aliases = [ "vi" "vim" ];
-    plugins = with pkgs.vimPlugins; [
-      gruvbox-nvim
+    initLua = builtins.readFile ../../lua/init.lua;
+    plugins = [
+      pkgs.vimPlugins.gruvbox-nvim
     ];
+#      initLua = "vim.cmd('colorscheme gruvbox')";
   };
 }
