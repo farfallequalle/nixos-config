@@ -3,7 +3,7 @@ environment.systemPackages = with pkgs; [
     neovim
     kitty
     git
-    brave
+    firefox
   ];
 
 nixpkgs.config.allowUnfree = true;
