@@ -6,9 +6,14 @@
       "vi"
       "vim"
     ];
-    initLua = builtins.readFile ../../lua/init.lua;
+    luaFiles = [
+    		../../lua/init.lua
+    		../../lua/options.lua
+    		../../lua/keymaps.lua
+		];
     plugins = {
-      start = with pkgs.vimPlugins; [ gruvbox-nvim ];
+      start = with pkgs.vimPlugins; [ gruvbox-nvim
+        bufferline-nvim ];
       opt = [ ];
       dev = { };
     };
