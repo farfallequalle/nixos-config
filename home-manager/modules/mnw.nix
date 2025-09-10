@@ -8,7 +8,7 @@
     ];
     initLua = builtins.readFile ../../lua/init.lua;
     plugins = {
-      start = [ pkgs.vimPlugins.gruvbox-nvim ];
+      start = with pkgs.vimPlugins; [ gruvbox-nvim ];
       opt = [ ];
       dev = { };
     };
