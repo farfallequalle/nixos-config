@@ -10,6 +10,7 @@
     wget
     curl
     ripgrep
+    pulseaudio
     pavucontrol
     xwayland
     git

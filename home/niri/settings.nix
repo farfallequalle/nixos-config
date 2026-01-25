@@ -19,6 +19,8 @@
 
       layout = {
 
+	always-center-single-column = true;
+
         background-color = "#00000000";
 	default-column-width = { proportion = 0.5; };
 
@@ -35,12 +37,6 @@
 
         gaps = 6;
 
-#        struts = {
-#          left = 20;
-#          right = 20;
-#          top = 20;
-#          bottom = 20;
-#        };
       };
 
       input = {

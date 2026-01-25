@@ -6,16 +6,26 @@ let
 in {
   programs.niri.settings.binds = with config.lib.niri.actions; let
     pactl = "${pkgs.pulseaudio}/bin/pactl";
+    brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
 
     volume-up = spawn pactl [ "set-sink-volume" "@DEFAULT_SINK@" "+5%" ];
     volume-down = spawn pactl [ "set-sink-volume" "@DEFAULT_SINK@" "-5%" ];
+
+    brightness-up = spawn brightnessctl [ "set" "10%+" ];
+    brightness-down = spawn brightnessctl [ "set" "10%-" ];
   in {
 
     "xf86audioraisevolume".action = volume-up;
     "xf86audiolowervolume".action = volume-down;
 
-    "control+super+xf86audioraisevolume".action = spawn "brightness" "up";
-    "control+super+xf86audiolowervolume".action = spawn "brightness" "down";
+    "XF86MonBrightnessUp" = {
+      allow-when-locked = true;
+      action = brightness-up;
+    };
+    "XF86MonBrightnessDown" = {
+      allow-when-locked = true;
+      action = brightness-down;
+    };
 
     "super+q".action = close-window;
     "super+b".action = spawn apps.browser;
@@ -23,7 +33,8 @@ in {
     "super+E".action = spawn apps.fileManager;
     "super+Space".action = spawn apps.appLauncher;
 
-    "super+f".action = fullscreen-window;
+    "super+f".action = maximize-column;
+    "super+shift+f".action = fullscreen-window;
     "super+t".action = toggle-window-floating;
 
     "super+Left".action = focus-column-left;
