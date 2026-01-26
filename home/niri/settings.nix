@@ -6,9 +6,9 @@
     package = pkgs.niri;
     settings = {
       workspaces = {
-        "browser" = {};
-        "vesktop" = {};
-	"chat" = {};
+        "browser" = { };
+        "chat" = { };
+        "vesktop" = { };
       };
 
       prefer-no-csd = true;
@@ -19,10 +19,12 @@
 
       layout = {
 
-	always-center-single-column = true;
+        always-center-single-column = true;
 
         background-color = "#00000000";
-	default-column-width = { proportion = 0.5; };
+        default-column-width = {
+          proportion = 0.5;
+        };
 
         focus-ring = {
           enable = true;
@@ -57,15 +59,15 @@
       };
 
       outputs = {
-#        "DP-1" = {
-#          mode = {
-#            width = 2560;
-#            height = 1440;
-#            refresh = 359.97900;
-#          };
-#          scale = 1.0;
-#          position = { x = 0; y = 0; };
-#        };
+        #        "DP-1" = {
+        #          mode = {
+        #            width = 2560;
+        #            height = 1440;
+        #            refresh = 359.97900;
+        #          };
+        #          scale = 1.0;
+        #          position = { x = 0; y = 0; };
+        #        };
       };
 
       cursor = {

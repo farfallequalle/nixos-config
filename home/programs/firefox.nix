@@ -69,7 +69,12 @@
         search = {
           force = true;
           default = "ddg";
-          order = [ "searxng" "nix-packages" "nixos-wiki" "ddg" ];
+          order = [
+            "searxng"
+            "nix-packages"
+            "nixos-wiki"
+            "ddg"
+          ];
 
           engines = {
             searxng = {
@@ -89,8 +94,14 @@
                 {
                   template = "https://search.nixos.org/packages?type=packages&query={searchTerms}";
                   params = [
-                    { name = "type"; value = "packages"; }
-                    { name = "query"; value = "{searchTerms}"; }
+                    {
+                      name = "type";
+                      value = "packages";
+                    }
+                    {
+                      name = "query";
+                      value = "{searchTerms}";
+                    }
                   ];
                 }
               ];

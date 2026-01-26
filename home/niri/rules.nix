@@ -2,13 +2,15 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   programs.niri.settings = {
-    layer-rules = [];
-    
+    layer-rules = [ ];
+
     window-rules = [
       {
         matches = [
+          { at-startup = true; }
           { app-id = "firefox"; }
         ];
         open-on-workspace = "browser";
@@ -16,13 +18,30 @@
 
       {
         matches = [
+          { at-startup = true; }
+          { app-id = "org.telegram.desktop"; }
+        ];
+        open-on-workspace = "chat";
+      }
+
+      {
+        matches = [
+          { at-startup = true; }
+          { app-id = "zapzap"; }
+        ];
+        open-on-workspace = "chat";
+      }
+
+      {
+        matches = [
+          { at-startup = true; }
           { app-id = "vesktop"; }
         ];
         open-on-workspace = "vesktop";
       }
 
       {
-        matches = [{}];
+        matches = [ { } ];
         geometry-corner-radius = {
           top-left = 20.0;
           top-right = 20.0;
