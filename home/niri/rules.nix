@@ -10,7 +10,6 @@
     window-rules = [
       {
         matches = [
-          { at-startup = true; }
           { app-id = "firefox"; }
         ];
         open-on-workspace = "browser";

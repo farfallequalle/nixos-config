@@ -5,6 +5,6 @@
     { command = [ "vesktop" ]; }
     { command = [ "Telegram" ]; }
     { command = [ "zapzap" ]; }
-    { command = [ "firefox" ]; }
+    { command = [ "sh" "-c" "sleep 3 && firefox" ]; }
   ];
 }
