@@ -6,8 +6,6 @@
       font-size = 11;
       font-family = "JetBrainsMono Nerd Font";
 
-      theme = "wallust";
-
       window-decoration = false;
 
       # Disables ligatures

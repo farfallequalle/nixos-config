@@ -25,7 +25,7 @@ in
       set fish_greeting # Begrüßung deaktivieren
     '';
     shellAliases = {
-      nrs = "git add . && nh os switch ~/nixos-config/ -H fw13";
+      nrs = "git -C ~/nixos-config add . && nh os switch ~/nixos-config -H fw13";
       host = "nvim ~/nixos-config/hosts/fw13";
       home = "nvim ~/nixos-config/home";
       flake = "nvim ~/nixos-config/flake.nix";
