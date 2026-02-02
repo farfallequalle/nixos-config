@@ -10,6 +10,7 @@
   imports = [
     ./hardware-configuration.nix
     "${self}/system/greeter/greetd.nix"
+    "${self}/system/programs/steam.nix"
     "${self}/system/packages.nix"
     "${self}/system/xdg.nix"
     inputs.home-manager.nixosModules.default
