@@ -25,6 +25,5 @@
       };
     };
 
-    targets.ghostty.enable = false;
   };
 }

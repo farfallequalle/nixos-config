@@ -19,6 +19,8 @@ in
       grim = "${pkgs.grim}/bin/grim";
       slurp = "${pkgs.slurp}/bin/slurp";
       wl-copy = "${pkgs.wl-clipboard}/bin/wl-copy";
+      cliphist = "${pkgs.cliphist}/bin/cliphist";
+      rofi = "${pkgs.rofi-wayland}/bin/rofi";
 
       volume-up = spawn pactl [ "set-sink-volume" "@DEFAULT_SINK@" "+5%" ];
       volume-down = spawn pactl [ "set-sink-volume" "@DEFAULT_SINK@" "-5%" ];
@@ -34,6 +36,7 @@ in
 
       screenshot = spawn "sh" [ "-c" "${grim} - | ${wl-copy}" ];
       screenshot-select = spawn "sh" [ "-c" "${grim} -g \"$(${slurp})\" - | ${wl-copy}" ];
+      clipboard-history = spawn "sh" [ "-c" "${cliphist} list | ${rofi} -dmenu | ${cliphist} decode | ${wl-copy}" ];
     in
     {
 
@@ -51,6 +54,7 @@ in
 
       "Print".action = screenshot;
       "Shift+Print".action = screenshot-select;
+      "super+v".action = clipboard-history;
 
       "super+q".action = close-window;
       "super+b".action = spawn apps.browser;

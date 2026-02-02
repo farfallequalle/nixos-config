@@ -6,4 +6,5 @@ with pkgs;
   telegram-desktop
   vesktop
   claude-code
+  cliphist
 ]

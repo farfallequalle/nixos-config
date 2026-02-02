@@ -11,6 +11,7 @@ in
     ../../home/niri/default.nix
     ../../home/programs/firefox.nix
     ../../home/programs/ghostty.nix
+    ../../home/programs/gammastep.nix
     ../../system/programs/stylix.nix
   ];
 
@@ -19,6 +20,38 @@ in
   xdg.portal.enable = true;
   # goated:
   programs.nh.enable = true;
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
+
+  programs.bat = {
+    enable = true;
+  };
+
+  programs.eza = {
+    enable = true;
+    icons = "auto";
+    git = true;
+  };
+
+  programs.fzf = {
+    enable = true;
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+  };
 
   programs.fish = {
     enable = true;
@@ -30,6 +63,10 @@ in
       host = "nvim ~/nixos-config/hosts/fw13";
       home = "nvim ~/nixos-config/home";
       flake = "nvim ~/nixos-config/flake.nix";
+      cat = "bat";
+      ls = "eza";
+      ll = "eza -la";
+      tree = "eza --tree";
     };
   };
 
