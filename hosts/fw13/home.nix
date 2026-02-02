@@ -11,6 +11,7 @@ in
     ../../home/niri/default.nix
     ../../home/programs/firefox.nix
     ../../home/programs/ghostty.nix
+    ../../system/programs/stylix.nix
   ];
 
   home.packages = allPackages;

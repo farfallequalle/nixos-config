@@ -40,6 +40,7 @@
   };
 
   programs.fish.enable = true;
+  programs.dconf.enable = true;
 
   services.xserver.xkb = {
     layout = "de";
@@ -58,7 +59,14 @@
     ];
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+    overlays = [
+      inputs.niri.overlays.niri
+      inputs.nur.overlays.default
+      inputs.claude-code.overlays.default
+    ];
+  };
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -74,6 +82,7 @@
     useUserPackages = true;
     backupFileExtension = "backup";
     extraSpecialArgs = { inherit inputs; };
+    sharedModules = [ inputs.stylix.homeModules.stylix ];
     users = {
       "farfallequalle" = import ./home.nix;
     };

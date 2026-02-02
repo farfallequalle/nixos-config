@@ -7,6 +7,7 @@
       font-family = "JetBrainsMono Nerd Font";
 
       window-decoration = false;
+      confirm-close-surface = false;
 
       # Disables ligatures
       font-feature = [

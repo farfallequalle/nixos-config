@@ -15,40 +15,42 @@ in
     let
       pactl = "${pkgs.pulseaudio}/bin/pactl";
       brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
+      playerctl = "${pkgs.playerctl}/bin/playerctl";
+      grim = "${pkgs.grim}/bin/grim";
+      slurp = "${pkgs.slurp}/bin/slurp";
+      wl-copy = "${pkgs.wl-clipboard}/bin/wl-copy";
 
-      volume-up = spawn pactl [
-        "set-sink-volume"
-        "@DEFAULT_SINK@"
-        "+5%"
-      ];
-      volume-down = spawn pactl [
-        "set-sink-volume"
-        "@DEFAULT_SINK@"
-        "-5%"
-      ];
+      volume-up = spawn pactl [ "set-sink-volume" "@DEFAULT_SINK@" "+5%" ];
+      volume-down = spawn pactl [ "set-sink-volume" "@DEFAULT_SINK@" "-5%" ];
+      volume-mute = spawn pactl [ "set-sink-mute" "@DEFAULT_SINK@" "toggle" ];
+      mic-mute = spawn pactl [ "set-source-mute" "@DEFAULT_SOURCE@" "toggle" ];
 
-      brightness-up = spawn brightnessctl [
-        "set"
-        "10%+"
-      ];
-      brightness-down = spawn brightnessctl [
-        "set"
-        "10%-"
-      ];
+      brightness-up = spawn brightnessctl [ "set" "10%+" ];
+      brightness-down = spawn brightnessctl [ "set" "10%-" ];
+
+      media-play = spawn playerctl [ "play-pause" ];
+      media-next = spawn playerctl [ "next" ];
+      media-prev = spawn playerctl [ "previous" ];
+
+      screenshot = spawn "sh" [ "-c" "${grim} - | ${wl-copy}" ];
+      screenshot-select = spawn "sh" [ "-c" "${grim} -g \"$(${slurp})\" - | ${wl-copy}" ];
     in
     {
 
-      "xf86audioraisevolume".action = volume-up;
-      "xf86audiolowervolume".action = volume-down;
+      "XF86AudioRaiseVolume".action = volume-up;
+      "XF86AudioLowerVolume".action = volume-down;
+      "XF86AudioMute".action = volume-mute;
+      "XF86AudioMicMute".action = mic-mute;
 
-      "XF86MonBrightnessUp" = {
-        allow-when-locked = true;
-        action = brightness-up;
-      };
-      "XF86MonBrightnessDown" = {
-        allow-when-locked = true;
-        action = brightness-down;
-      };
+      "XF86AudioPlay".action = media-play;
+      "XF86AudioNext".action = media-next;
+      "XF86AudioPrev".action = media-prev;
+
+      "XF86MonBrightnessUp" = { allow-when-locked = true; action = brightness-up; };
+      "XF86MonBrightnessDown" = { allow-when-locked = true; action = brightness-down; };
+
+      "Print".action = screenshot;
+      "Shift+Print".action = screenshot-select;
 
       "super+q".action = close-window;
       "super+b".action = spawn apps.browser;

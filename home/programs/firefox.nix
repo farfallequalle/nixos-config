@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  stylix.targets.firefox.profileNames = [ "farfallequalle" ];
+
   programs.firefox = {
     enable = true;
 
