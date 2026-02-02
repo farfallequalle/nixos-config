@@ -17,26 +17,19 @@
 
       {
         matches = [
-          { at-startup = true; }
           { app-id = "org.telegram.desktop"; }
-        ];
-        open-on-workspace = "chat";
-      }
-
-      {
-        matches = [
-          { at-startup = true; }
           { app-id = "zapzap"; }
         ];
         open-on-workspace = "chat";
+        open-focused = false;
       }
 
       {
         matches = [
-          { at-startup = true; }
           { app-id = "vesktop"; }
         ];
         open-on-workspace = "vesktop";
+        open-focused = false;
       }
 
       {

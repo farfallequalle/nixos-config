@@ -69,7 +69,7 @@
 
         search = {
           force = true;
-          default = "ddg";
+          default = "google";
           order = [ "searxng" "nix-packages" "nixos-wiki" "ddg" ];
 
           engines = {

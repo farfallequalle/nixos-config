@@ -6,9 +6,10 @@
     home-manager.url = "github:nix-community/home-manager";
     niri.url = "github:sodiboo/niri-flake";
     nur.url = "github:nix-community/NUR";
+    claude-code.url = "github:sadjow/claude-code-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, niri, nur, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, niri, nur, claude-code, ... }@inputs: {
     nixosConfigurations.fw13 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit self inputs; };
@@ -19,6 +20,7 @@
           nixpkgs.overlays = [ 
             inputs.niri.overlays.niri 
             inputs.nur.overlays.default
+	    inputs.claude-code.overlays.default
           ];
         }
 	];
