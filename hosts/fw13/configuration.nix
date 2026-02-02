@@ -42,6 +42,8 @@
   programs.fish.enable = true;
   programs.dconf.enable = true;
 
+  services.fwupd.enable = true;
+
   services.xserver.xkb = {
     layout = "de";
     variant = "";
