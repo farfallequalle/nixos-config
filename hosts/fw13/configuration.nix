@@ -39,7 +39,7 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  programs.fish.enable = true;
+  programs.zsh.enable = true;
   programs.dconf.enable = true;
 
   services.fwupd.enable = true;
@@ -54,7 +54,7 @@
   users.users.farfallequalle = {
     isNormalUser = true;
     description = "farfallequalle";
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
     extraGroups = [
       "networkmanager"
       "wheel"

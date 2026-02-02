@@ -20,7 +20,7 @@ in
       slurp = "${pkgs.slurp}/bin/slurp";
       wl-copy = "${pkgs.wl-clipboard}/bin/wl-copy";
       cliphist = "${pkgs.cliphist}/bin/cliphist";
-      rofi = "${pkgs.rofi-wayland}/bin/rofi";
+      rofi = "${pkgs.rofi}/bin/rofi";
 
       volume-up = spawn pactl [ "set-sink-volume" "@DEFAULT_SINK@" "+5%" ];
       volume-down = spawn pactl [ "set-sink-volume" "@DEFAULT_SINK@" "-5%" ];

@@ -39,11 +39,12 @@ in
 
   programs.fzf = {
     enable = true;
+    enableZshIntegration = true;
   };
 
   programs.zoxide = {
     enable = true;
-    enableFishIntegration = true;
+    enableZshIntegration = true;
   };
 
   programs.neovim = {
@@ -53,10 +54,21 @@ in
     vimAlias = true;
   };
 
-  programs.fish = {
+  programs.zsh = {
     enable = true;
-    interactiveShellInit = ''
-      set fish_greeting # Begrüßung deaktivieren
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    enableCompletion = true;
+    historySubstringSearch.enable = true;
+    plugins = [
+      {
+        name = "powerlevel10k";
+        src = pkgs.zsh-powerlevel10k;
+        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+      }
+    ];
+    initContent = ''
+      [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
     '';
     shellAliases = {
       nrs = "git -C ~/nixos-config add . && nh os switch ~/nixos-config -H fw13";
