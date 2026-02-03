@@ -12,6 +12,7 @@ in
     ../../home/programs/firefox.nix
     ../../home/programs/ghostty.nix
     ../../home/programs/gammastep.nix
+    ../../home/programs/git.nix
     ../../system/programs/stylix.nix
   ];
 
@@ -20,6 +21,16 @@ in
   xdg.portal.enable = true;
   # goated:
   programs.nh.enable = true;
+
+  programs.vesktop.enable = true;
+
+  stylix.targets = {
+    vesktop.enable = true;
+    bat.enable = true;
+    ghostty.enable = true;
+    fzf.enable = true;
+    neovim.enable = true;
+  };
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -68,7 +79,7 @@ in
       }
     ];
     initContent = ''
-      [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+      source ${../../home/programs/p10k.zsh}
     '';
     shellAliases = {
       nrs = "git -C ~/nixos-config add . && nh os switch ~/nixos-config -H fw13";
@@ -81,6 +92,11 @@ in
       tree = "eza --tree";
     };
   };
+
+  home.activation.setWallpaper = config.lib.dag.entryAfter [ "writeBoundary" ] ''
+    export WAYLAND_DISPLAY=''${WAYLAND_DISPLAY:-wayland-1}
+    ${pkgs.swww}/bin/swww img ${config.stylix.image} 2>/dev/null || true
+  '';
 
   home.stateVersion = "25.11";
   programs.home-manager.enable = true;

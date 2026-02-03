@@ -13,7 +13,6 @@
     pulseaudio
     pavucontrol
     xwayland
-    git
     ffmpeg
     ];
 }

@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  colors = config.lib.stylix.colors.withHashtag;
+in
 {
   programs.niri = {
     enable = true;
@@ -29,12 +32,8 @@
         focus-ring = {
           enable = true;
           width = 3;
-          active = {
-            color = "#A8AEFF";
-          };
-          inactive = {
-            color = "#505050";
-          };
+          active.color = colors.base0D;
+          inactive.color = colors.base02;
         };
 
         gaps = 6;
