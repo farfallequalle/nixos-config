@@ -23,6 +23,7 @@ in
       layout = {
 
         always-center-single-column = true;
+        center-focused-column = "on-overflow";
 
         background-color = "#00000000";
         default-column-width = {

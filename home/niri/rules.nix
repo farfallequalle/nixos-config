@@ -13,7 +13,7 @@
           { app-id = "firefox"; }
         ];
         open-on-workspace = "browser";
-        default-column-width.proportion = 1.0;
+        open-maximized = true;
       }
 
       {
@@ -31,6 +31,7 @@
         ];
         open-on-workspace = "vesktop";
         open-focused = false;
+        open-maximized = true;
       }
 
       {

@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
   stylix.targets.firefox.profileNames = [ "farfallequalle" ];
+  stylix.targets.firefox.colorTheme.enable = true;
+  programs.firefox.profiles.farfallequalle.extensions.force = true;
 
   programs.firefox = {
     enable = true;
@@ -18,6 +20,8 @@
 
         settings = {
           # Show previous session on startup (2 = restore session)
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+          "extensions.autoDisableScopes" = 0;
           "browser.startup.page" = 2;
 
           # Remember zoom level per site
