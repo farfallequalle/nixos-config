@@ -13,7 +13,7 @@ in
     ../../home/programs/ghostty.nix
     ../../home/programs/gammastep.nix
     ../../home/programs/git.nix
-    ../../system/programs/stylix.nix
+    ../../home/programs/stylix.nix
   ];
 
   home.packages = allPackages;

@@ -15,8 +15,7 @@
   # Add system packages for VR support
   environment.systemPackages = with pkgs; [
     usbutils
-    pkgs.libsndfile
-    pkgs.xwayland
+    libsndfile
     gamescope
   ];
 }
