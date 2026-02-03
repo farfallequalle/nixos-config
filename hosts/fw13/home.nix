@@ -11,7 +11,7 @@ in
     ../../home/niri/default.nix
     ../../home/programs/firefox.nix
     ../../home/programs/ghostty.nix
-    ../../home/programs/gammastep.nix
+    ../../home/programs/wlsunset.nix
     ../../home/programs/git.nix
     ../../home/programs/stylix.nix
   ];
