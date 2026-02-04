@@ -15,6 +15,9 @@
     globals.mapleader = " ";
 
     highlightOverride = {
+      Normal = { bg = "none"; };
+      NormalFloat = { bg = "none"; };
+      SignColumn = { bg = "none"; };
       WhichKeyGroup.link = "WhichKeyDesc";
       WhichKeyIconBlue = { fg = "#7daea3"; bold = true; };
       WhichKeyIconOrange = { fg = "#e78a4e"; bold = true; };
