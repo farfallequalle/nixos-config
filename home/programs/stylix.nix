@@ -3,7 +3,7 @@
   stylix = {
     enable = true;
     autoEnable = true;
-    image = ../../wallpapers/greenknight.jpg;
+    image = ../../wallpapers/wallhaven-lyzdl2.jpg;
     polarity = "dark";
 
     fonts = {
@@ -25,5 +25,17 @@
       };
     };
 
+  };
+
+  stylix.targets = {
+    vesktop.enable = true;
+    bat.enable = true;
+    ghostty.enable = true;
+    fzf.enable = true;
+    nixvim = {
+      enable = true;
+      colors.enable = false;
+      fonts.enable = true;
+    };
   };
 }

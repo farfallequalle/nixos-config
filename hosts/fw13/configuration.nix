@@ -84,7 +84,10 @@
     useUserPackages = true;
     backupFileExtension = "backup";
     extraSpecialArgs = { inherit inputs; };
-    sharedModules = [ inputs.stylix.homeModules.stylix ];
+    sharedModules = [
+      inputs.stylix.homeModules.stylix
+      inputs.nixvim.homeModules.nixvim
+    ];
     users = {
       "farfallequalle" = import ./home.nix;
     };
