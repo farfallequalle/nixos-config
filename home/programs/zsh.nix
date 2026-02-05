@@ -10,7 +10,7 @@
       ls = "eza";
       ll = "eza -la";
       tree = "eza --tree";
-      cc = "cd ~/nixos-config && claude";
+      cc = "cd ~/nixos-config && claude -c";
     };
   };
 
@@ -67,13 +67,12 @@
       };
 
       character = {
-        success_symbol = "[❯](purple)";
-        error_symbol = "[❯](red)";
+        success_symbol = "[󰄾](purple)";
+        error_symbol = "[󰄾](red)";
       };
 
       nix_shell = {
         symbol = " ";
-        heuristic = true;
       };
 
       package = {
