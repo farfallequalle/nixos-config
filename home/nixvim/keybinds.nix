@@ -24,6 +24,10 @@
       { mode = "n"; key = "<leader>e"; action = "<cmd>Oil<cr>"; options = { desc = "Open file explorer"; silent = true; }; }
 
       { mode = "n"; key = "<Esc>"; action = "<cmd>nohlsearch<cr>"; options.desc = "Clear search"; }
+
+      { mode = "n"; key = "<leader>xx"; action = "<cmd>Trouble diagnostics toggle<cr>"; options.desc = "All diagnostics"; }
+      { mode = "n"; key = "<leader>xd"; action = "<cmd>Trouble diagnostics toggle filter.buf=0<cr>"; options.desc = "Buffer diagnostics"; }
+      { mode = "n"; key = "<leader>xq"; action = "<cmd>Trouble quickfix toggle<cr>"; options.desc = "Quickfix"; }
     ];
   };
 }

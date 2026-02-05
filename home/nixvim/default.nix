@@ -22,6 +22,7 @@
       WhichKeyIconBlue = { fg = "#7daea3"; bold = true; };
       WhichKeyIconOrange = { fg = "#e78a4e"; bold = true; };
       WhichKeyIconGreen = { fg = "#a9b665"; bold = true; };
+      WhichKeyIconRed = { fg = "#ea6962"; bold = true; };
     };
 
     opts = {

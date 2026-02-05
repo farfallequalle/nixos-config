@@ -14,12 +14,12 @@
   outputs = {
     self,
     nixpkgs,
-    home-manager,
-    niri,
-    nur,
-    claude-code,
-    stylix,
-    nixvim,
+    # home-manager,
+    # niri,
+    # nur,
+    # claude-code,
+    # stylix,
+    # nixvim,
     ...
   } @ inputs: {
     nixosConfigurations.fw13 = nixpkgs.lib.nixosSystem {

@@ -1,4 +1,4 @@
-{ lib, pkgs, config, ... }:
+{pkgs, config, ...}:
 
 let
   wallpaper = "${config.stylix.image}";

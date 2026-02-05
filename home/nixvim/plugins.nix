@@ -37,6 +37,10 @@
     comment.enable = true;
     sleuth.enable = true;
     indent-blankline.enable = true;
+    trouble = {
+      enable = true;
+      settings.focus = true;
+    };
     which-key = {
       enable = true;
       settings = {
@@ -46,6 +50,7 @@
           { __unkeyed-1 = "<leader>f"; group = "Find..."; icon = { icon = " "; hl = "WhichKeyIconBlue"; }; }
           { __unkeyed-1 = "<leader>c"; group = "Code..."; icon = { icon = " "; hl = "WhichKeyIconOrange"; }; }
           { __unkeyed-1 = "<leader>r"; group = "Refactor..."; icon = { icon = "󰑕 "; hl = "WhichKeyIconGreen"; }; }
+          { __unkeyed-1 = "<leader>x"; group = "Trouble..."; icon = { icon = " "; hl = "WhichKeyIconRed"; }; }
         ];
       };
     };

@@ -1,9 +1,8 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   stylix = {
     enable = true;
     autoEnable = true;
-    image = ../../wallpapers/wallhaven-lyzdl2.jpg;
+    image = ../../wallpapers/greenwanderer.jpg;
     polarity = "dark";
 
     fonts = {
@@ -24,7 +23,6 @@
         desktop = 11;
       };
     };
-
   };
 
   stylix.targets = {

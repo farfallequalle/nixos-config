@@ -6,7 +6,11 @@
         enable = true;
         servers.nixd = {
           enable = true;
-          settings.formatting.command = [ "alejandra" ];
+          settings = {
+            formatting.command = [ "alejandra" ];
+            nixpkgs.expr = "import <nixpkgs> {}";
+            options.nixos.expr = ''(builtins.getFlake "/home/farfallequalle/nixos-config").nixosConfigurations.fw13.options'';
+          };
         };
       };
 

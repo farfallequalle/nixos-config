@@ -66,6 +66,9 @@
           # Disable news/top stories from Mozilla on new tab page
           "browser.newtabpage.activity-stream.feeds.system.topstories" = false;
 
+          # Disable translation feature
+          "browser.translations.enable" = false;
+
           # (Optional additions if you want a clean new tab page)
           # Disable highlights like recent history and bookmarks
           # "browser.newtabpage.activity-stream.feeds.section.highlights" = false;
