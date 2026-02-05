@@ -31,7 +31,10 @@
       };
     };
 
-    lualine.enable = true;
+    lualine = {
+      enable = true;
+      settings.sections.lualine_x = [ "filetype" ];
+    };
     gitsigns.enable = true;
     oil.enable = true;
     comment.enable = true;

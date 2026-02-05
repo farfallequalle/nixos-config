@@ -31,7 +31,7 @@
       };
 
       git_branch = {
-        symbol = " ";
+        symbol = "󰘬 ";
         style = "cyan";
       };
 
