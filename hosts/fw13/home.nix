@@ -23,7 +23,12 @@ in {
   home.packages = allPackages;
 
   xdg.portal.enable = true;
-  programs.nh.enable = true;
+  programs.nh = {
+    enable = true;
+    flake = "/home/farfallequalle/nixos-config";
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+  };
 
   programs.vesktop.enable = true;
 
@@ -34,7 +39,7 @@ in {
   };
 
   programs.zsh.shellAliases = {
-    nrs = "git -C ~/nixos-config add . && nh os switch ~/nixos-config -H fw13";
+    nrs = "git -C ~/nixos-config add . && nh os switch -H fw13";
     host = "nvim ~/nixos-config/hosts/fw13";
     home = "nvim ~/nixos-config/home";
     flake = "nvim ~/nixos-config/flake.nix";
