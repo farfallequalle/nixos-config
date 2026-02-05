@@ -21,7 +21,7 @@
       { mode = "n"; key = "<C-l>"; action = "<C-w>l"; options.desc = "Window right"; }
 
       { mode = "n"; key = "<leader>d"; action = "<cmd>lua vim.diagnostic.open_float()<cr>"; options.desc = "Line diagnostics"; }
-      { mode = "n"; key = "<leader>e"; action = "<cmd>Oil<cr>"; options = { desc = "Open file explorer"; silent = true; }; }
+      { mode = "n"; key = "<leader>e"; action = "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>"; options = { desc = "File browser"; silent = true; }; }
 
       { mode = "n"; key = "<Esc>"; action = "<cmd>nohlsearch<cr>"; options.desc = "Clear search"; }
 

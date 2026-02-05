@@ -6,4 +6,5 @@ with pkgs; [
   cliphist
   swww
   seafile-client
+  obsidian
 ]

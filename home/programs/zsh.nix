@@ -10,6 +10,7 @@
       ls = "eza";
       ll = "eza -la";
       tree = "eza --tree";
+      cc = "cd ~/nixos-config && claude";
     };
   };
 
@@ -21,10 +22,10 @@
       command_timeout = 200;
 
       format = ''
-        󱄅 $directory$git_branch$git_commit$git_state$git_status$cmd_duration$line_break$status$character'';
+        󱄅 $username$hostname$directory$git_branch$git_commit$git_state$git_status$nix_shell$docker_context$package$python$rust$golang$nodejs$lua$java$c$ruby$cmd_duration$line_break$status$character'';
 
       directory = {
-        read_only = " ";
+        read_only = " ";
         truncation_length = 5;
         truncation_symbol = "…/";
         style = "blue bold";
@@ -42,12 +43,12 @@
       git_status = {
         style = "yellow";
         format = "[$all_status$ahead_behind]($style) ";
-        conflicted = " ";
+        conflicted = " ";
         ahead = "⇡";
         behind = "⇣";
         diverged = "⇕";
         untracked = "?";
-        stashed = " ";
+        stashed = " ";
         modified = "!";
         staged = "+";
         renamed = "»";
@@ -71,35 +72,36 @@
       };
 
       nix_shell = {
-        symbol = " ";
+        symbol = " ";
+        heuristic = true;
       };
 
       package = {
-        symbol = " ";
+        symbol = "󰏗 ";
       };
 
       python = {
-        symbol = " ";
+        symbol = " ";
       };
 
       rust = {
-        symbol = " ";
+        symbol = " ";
       };
 
       golang = {
-        symbol = " ";
+        symbol = " ";
       };
 
       nodejs = {
-        symbol = " ";
+        symbol = " ";
       };
 
       lua = {
-        symbol = " ";
+        symbol = " ";
       };
 
       docker_context = {
-        symbol = " ";
+        symbol = " ";
       };
     };
   };

@@ -19,7 +19,7 @@
         name = "Noto Serif";
       };
       sizes = {
-        terminal = 11;
+        terminal = 13;
         desktop = 11;
       };
     };

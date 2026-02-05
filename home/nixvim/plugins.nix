@@ -7,7 +7,13 @@
       settings.indent.enable = true;
     };
 
-    telescope.enable = true;
+    telescope = {
+      enable = true;
+      extensions.file-browser = {
+        enable = true;
+        settings.hijack_netrw = true;
+      };
+    };
     web-devicons.enable = true;
 
     cmp = {
@@ -36,7 +42,7 @@
       settings.sections.lualine_x = [ "filetype" ];
     };
     gitsigns.enable = true;
-    oil.enable = true;
+
     comment.enable = true;
     sleuth.enable = true;
     indent-blankline.enable = true;
