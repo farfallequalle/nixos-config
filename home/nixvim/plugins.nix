@@ -9,9 +9,14 @@
 
     telescope = {
       enable = true;
+      defaults.initial_mode = "normal";
       extensions.file-browser = {
         enable = true;
-        settings.hijack_netrw = true;
+        settings = {
+          hijack_netrw = true;
+          initial_mode = "normal";
+          display_stat = {};
+        };
       };
     };
     web-devicons.enable = true;
@@ -46,6 +51,20 @@
     comment.enable = true;
     sleuth.enable = true;
     indent-blankline.enable = true;
+    obsidian = {
+      enable = true;
+      settings = {
+        workspaces = [{
+          name = "vault";
+          path = "~/Seafile/VAULT-42";
+        }];
+        completion = {
+          nvim_cmp = true;
+          min_chars = 2;
+        };
+        legacy_commands = false;
+      };
+    };
     trouble = {
       enable = true;
       settings.focus = true;
@@ -59,6 +78,7 @@
           { __unkeyed-1 = "<leader>f"; group = "Find..."; icon = { icon = " "; hl = "WhichKeyIconBlue"; }; }
           { __unkeyed-1 = "<leader>c"; group = "Code..."; icon = { icon = " "; hl = "WhichKeyIconOrange"; }; }
           { __unkeyed-1 = "<leader>r"; group = "Refactor..."; icon = { icon = "󰑕 "; hl = "WhichKeyIconGreen"; }; }
+          { __unkeyed-1 = "<leader>o"; group = "Obsidian..."; icon = { icon = "󱓧 "; hl = "WhichKeyIconBlue"; }; }
           { __unkeyed-1 = "<leader>x"; group = "Trouble..."; icon = { icon = " "; hl = "WhichKeyIconRed"; }; }
         ];
       };

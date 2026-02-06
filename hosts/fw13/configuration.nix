@@ -13,6 +13,7 @@
     "${self}/system/programs/steam.nix"
     "${self}/system/packages.nix"
     "${self}/system/xdg.nix"
+    "${self}/system/bluetooth.nix"
     "${self}/system/programs/power.nix"
     inputs.home-manager.nixosModules.default
   ];

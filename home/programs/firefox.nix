@@ -22,7 +22,8 @@
           # Show previous session on startup (2 = restore session)
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "extensions.autoDisableScopes" = 0;
-          "browser.startup.page" = 2;
+          "browser.startup.page" = 3;
+          "browser.sessionstore.resume_from_crash" = true;
 
           # Remember zoom level per site
           "browser.zoom.siteSpecific" = true;
