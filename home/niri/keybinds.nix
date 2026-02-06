@@ -64,6 +64,9 @@ in
       "super+f".action = maximize-column;
       "super+shift+f".action = fullscreen-window;
       "super+t".action = toggle-window-floating;
+      "super+Tab".action = toggle-overview;
+      "super+comma".action = consume-or-expel-window-left;
+      "super+period".action = consume-or-expel-window-right;
 
       "super+Left".action = focus-column-left;
       "super+Right".action = focus-column-right;

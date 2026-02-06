@@ -2,13 +2,12 @@
   config,
   pkgs,
   ...
-}: let
-  allPackages = import ./packages.nix {inherit pkgs;};
-in {
+}: {
   home.username = "farfallequalle";
   home.homeDirectory = "/home/farfallequalle";
 
   imports = [
+    ./packages.nix
     ../../home/niri/default.nix
     ../../home/programs/firefox.nix
     ../../home/programs/ghostty.nix
@@ -19,8 +18,6 @@ in {
     ../../home/programs/cli.nix
     ../../home/nixvim/default.nix
   ];
-
-  home.packages = allPackages;
 
   xdg.portal.enable = true;
   programs.nh = {

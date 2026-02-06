@@ -15,7 +15,8 @@
         settings = {
           hijack_netrw = true;
           initial_mode = "normal";
-          display_stat = {};
+          display_stat.__raw = "false";
+          layout_config.__raw = "{ preview_width = 0.7 }";
         };
       };
     };

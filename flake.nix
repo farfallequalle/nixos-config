@@ -9,6 +9,7 @@
     claude-code.url = "github:sadjow/claude-code-nix";
     stylix.url = "github:danth/stylix";
     nixvim.url = "github:nix-community/nixvim";
+    hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
   };
 
   outputs = {

@@ -11,7 +11,6 @@
         "org.freedesktop.impl.portal.RemoteDesktop" = "gnome";
       };
     };
-    xdgOpenUsePortal = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal
       xdg-desktop-portal-gtk
