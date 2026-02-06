@@ -94,6 +94,8 @@
     };
   };
 
+  security.pam.services.swaylock = {};
+
   system.stateVersion = "25.11"; 
 
 }

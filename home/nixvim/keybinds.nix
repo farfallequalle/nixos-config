@@ -25,13 +25,6 @@
 
       { mode = "n"; key = "<Esc>"; action = "<cmd>nohlsearch<cr>"; options.desc = "Clear search"; }
 
-      { mode = "n"; key = "<leader>of"; action = "<cmd>Obsidian quick-switch<cr>"; options.desc = "Find note"; }
-      { mode = "n"; key = "<leader>og"; action = "<cmd>Obsidian search<cr>"; options.desc = "Grep notes"; }
-      { mode = "n"; key = "<leader>on"; action = "<cmd>Obsidian new<cr>"; options.desc = "New note"; }
-      { mode = "n"; key = "<leader>ot"; action = "<cmd>Obsidian today<cr>"; options.desc = "Today's daily"; }
-      { mode = "n"; key = "<leader>ob"; action = "<cmd>Obsidian backlinks<cr>"; options.desc = "Backlinks"; }
-      { mode = "n"; key = "<leader>ol"; action = "<cmd>Obsidian links<cr>"; options.desc = "Links"; }
-
       { mode = "n"; key = "<leader>xx"; action = "<cmd>Trouble diagnostics toggle<cr>"; options.desc = "All diagnostics"; }
       { mode = "n"; key = "<leader>xd"; action = "<cmd>Trouble diagnostics toggle filter.buf=0<cr>"; options.desc = "Buffer diagnostics"; }
       { mode = "n"; key = "<leader>xq"; action = "<cmd>Trouble quickfix toggle<cr>"; options.desc = "Quickfix"; }

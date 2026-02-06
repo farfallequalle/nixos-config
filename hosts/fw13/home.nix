@@ -16,6 +16,7 @@
     ../../home/programs/stylix.nix
     ../../home/programs/zsh.nix
     ../../home/programs/cli.nix
+    ../../home/programs/swaylock.nix
     ../../home/nixvim/default.nix
   ];
 

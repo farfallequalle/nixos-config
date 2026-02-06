@@ -67,34 +67,55 @@ in
       "super+Tab".action = toggle-overview;
       "super+comma".action = consume-or-expel-window-left;
       "super+period".action = consume-or-expel-window-right;
+      "super+p".action = power-off-monitors;
+      "super+alt+l".action = spawn "${pkgs.swaylock}/bin/swaylock";
+
+      "super+h".action = focus-column-left;
+      "super+l".action = focus-column-right;
+      "super+j".action = focus-window-down;
+      "super+k".action = focus-window-up;
+      "super+u".action = focus-workspace-down;
+      "super+i".action = focus-workspace-up;
 
       "super+Left".action = focus-column-left;
       "super+Right".action = focus-column-right;
-      "super+Down".action = focus-workspace-down;
-      "super+Up".action = focus-workspace-up;
-
-      "super+Shift+Left".action = move-column-left;
-      "super+Shift+Right".action = move-column-right;
-      "super+Shift+Down".action = move-column-to-workspace-down;
-      "super+Shift+Up".action = move-column-to-workspace-up;
+      "super+Down".action = focus-window-down;
+      "super+Up".action = focus-window-up;
+      "super+Page_Down".action = focus-workspace-down;
+      "super+Page_Up".action = focus-workspace-up;
 
       "super+Shift+H".action = move-column-left;
       "super+Shift+L".action = move-column-right;
-      "super+Shift+J".action = move-column-to-workspace-down;
-      "super+Shift+K".action = move-column-to-workspace-up;
+      "super+Shift+J".action = move-window-down;
+      "super+Shift+K".action = move-window-up;
+      "super+Shift+U".action = move-column-to-workspace-down;
+      "super+Shift+I".action = move-column-to-workspace-up;
+
+      "super+Shift+Left".action = move-column-left;
+      "super+Shift+Right".action = move-column-right;
+      "super+Shift+Down".action = move-window-down;
+      "super+Shift+Up".action = move-window-up;
+      "super+Shift+Page_Down".action = move-column-to-workspace-down;
+      "super+Shift+Page_Up".action = move-column-to-workspace-up;
 
       "super+1".action = focus-workspace "browser";
       "super+2".action = focus-workspace "chat";
       "super+3".action = focus-workspace "vesktop";
+      "super+4".action = focus-workspace "4";
+      "super+5".action = focus-workspace "5";
+      "super+6".action = focus-workspace "6";
+      "super+7".action = focus-workspace "7";
+      "super+8".action = focus-workspace "8";
+      "super+9".action = focus-workspace "9";
 
-      "super+Shift+1".action = {
-        move-column-to-workspace = "browser";
-      };
-      "super+Shift+2".action = {
-        move-column-to-workspace = "chat";
-      };
-      "super+Shift+3".action = {
-        move-column-to-workspace = "vesktop";
-      };
+      "super+Shift+1".action = { move-column-to-workspace = "browser"; };
+      "super+Shift+2".action = { move-column-to-workspace = "chat"; };
+      "super+Shift+3".action = { move-column-to-workspace = "vesktop"; };
+      "super+Shift+4".action = { move-column-to-workspace = "4"; };
+      "super+Shift+5".action = { move-column-to-workspace = "5"; };
+      "super+Shift+6".action = { move-column-to-workspace = "6"; };
+      "super+Shift+7".action = { move-column-to-workspace = "7"; };
+      "super+Shift+8".action = { move-column-to-workspace = "8"; };
+      "super+Shift+9".action = { move-column-to-workspace = "9"; };
     };
 }

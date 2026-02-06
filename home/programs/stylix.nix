@@ -31,6 +31,7 @@
     ghostty.enable = true;
     fzf.enable = true;
     rofi.enable = true;
+    swaylock.enable = true;
     nixvim = {
       enable = true;
       colors.enable = false;
