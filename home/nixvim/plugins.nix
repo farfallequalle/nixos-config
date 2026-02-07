@@ -16,7 +16,8 @@
           hijack_netrw = true;
           initial_mode = "normal";
           display_stat.__raw = "false";
-          layout_config.__raw = "{ preview_width = 0.7 }";
+          sorting_strategy = "ascending";
+          layout_config.__raw = "{ preview_width = 0.7, prompt_position = 'top' }";
         };
       };
     };

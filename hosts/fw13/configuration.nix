@@ -45,6 +45,7 @@
   programs.dconf.enable = true;
 
   services.fwupd.enable = true;
+  services.upower.enable = true;
 
   services.xserver.xkb = {
     layout = "de";
@@ -86,15 +87,13 @@
     backupFileExtension = "backup";
     extraSpecialArgs = { inherit inputs; };
     sharedModules = [
-      inputs.stylix.homeModules.stylix
       inputs.nixvim.homeModules.nixvim
+      inputs.noctalia-shell.homeModules.default
     ];
     users = {
       "farfallequalle" = import ./home.nix;
     };
   };
-
-  security.pam.services.swaylock = {};
 
   system.stateVersion = "25.11"; 
 

@@ -26,9 +26,17 @@
 
       {
         matches = [
+          {app-id = "obsidian";}
+        ];
+        open-on-workspace = "notes";
+        open-maximized = true;
+      }
+
+      {
+        matches = [
           {app-id = "vesktop";}
         ];
-        open-on-workspace = "vesktop";
+        open-on-workspace = "discord";
         open-focused = false;
         open-maximized = true;
       }

@@ -1,7 +1,5 @@
 { pkgs, ... }:
 {
-  stylix.targets.firefox.profileNames = [ "farfallequalle" ];
-  stylix.targets.firefox.colorTheme.enable = true;
   programs.firefox.profiles.farfallequalle.extensions.force = true;
 
   programs.firefox = {

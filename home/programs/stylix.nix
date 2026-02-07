@@ -2,7 +2,7 @@
   stylix = {
     enable = true;
     autoEnable = true;
-    image = ../../wallpapers/greenwanderer.jpg;
+    image = ../../wallpapers/wallhaven-lyzdl2.jpg;
     polarity = "dark";
 
     fonts = {

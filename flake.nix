@@ -7,9 +7,12 @@
     niri.url = "github:sodiboo/niri-flake";
     nur.url = "github:nix-community/NUR";
     claude-code.url = "github:sadjow/claude-code-nix";
-    stylix.url = "github:danth/stylix";
     nixvim.url = "github:nix-community/nixvim";
     hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
+    noctalia-shell = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

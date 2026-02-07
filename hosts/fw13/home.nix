@@ -11,13 +11,12 @@
     ../../home/niri/default.nix
     ../../home/programs/firefox.nix
     ../../home/programs/ghostty.nix
-    ../../home/programs/wlsunset.nix
     ../../home/programs/git.nix
-    ../../home/programs/stylix.nix
     ../../home/programs/zsh.nix
     ../../home/programs/cli.nix
-    ../../home/programs/swaylock.nix
     ../../home/nixvim/default.nix
+    ../../home/programs/noctalia.nix
+    ../../home/programs/claude.nix
   ];
 
   xdg.portal.enable = true;
@@ -43,11 +42,6 @@
     flake = "nvim ~/nixos-config/flake.nix";
     cfg = "nvim ~/nixos-config .";
   };
-
-  home.activation.setWallpaper = config.lib.dag.entryAfter ["writeBoundary"] ''
-    export WAYLAND_DISPLAY=''${WAYLAND_DISPLAY:-wayland-1}
-    ${pkgs.swww}/bin/swww img ${config.stylix.image} 2>/dev/null || true
-  '';
 
   home.stateVersion = "25.11";
   programs.home-manager.enable = true;

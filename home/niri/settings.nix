@@ -1,23 +1,14 @@
-{ config, pkgs, ... }:
-
-let
-  colors = config.lib.stylix.colors.withHashtag;
-in
-{
+{pkgs, ...}: {
   programs.niri = {
     enable = true;
     package = pkgs.niri-unstable;
     settings = {
       workspaces = {
-        "browser" = { };
-        "chat" = { };
-        "vesktop" = { };
-        "4" = { };
-        "5" = { };
-        "6" = { };
-        "7" = { };
-        "8" = { };
-        "9" = { };
+        "1-browser" = {name = "browser";};
+        "2-notes" = {name = "notes";};
+        "3-chat" = {name = "chat";};
+        "4-discord" = {name = "discord";};
+        "5" = {name = "5";};
       };
 
       prefer-no-csd = true;
@@ -27,7 +18,6 @@ in
       };
 
       layout = {
-
         always-center-single-column = true;
 
         background-color = "#00000000";
@@ -38,12 +28,11 @@ in
         focus-ring = {
           enable = true;
           width = 3;
-          active.color = colors.base0D;
-          inactive.color = colors.base02;
+          active.color = "#7aa2f7";
+          inactive.color = "#292e42";
         };
 
         gaps = 6;
-
       };
 
       input = {
