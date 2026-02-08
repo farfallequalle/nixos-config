@@ -3,8 +3,17 @@
     enable = true;
     settings = {
       bar = {
-        position = "top";
+        position = "left";
         floating = false;
+        showCapsule = true;
+        widgets = {
+          left = [
+          {
+            id = "ControlCenter";
+            useDistroLogo = true;
+          }
+        ];
+      };
       };
       colorSchemes = {
         darkMode = true;
