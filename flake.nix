@@ -8,7 +8,6 @@
     nur.url = "github:nix-community/NUR";
     claude-code.url = "github:sadjow/claude-code-nix";
     nixvim.url = "github:nix-community/nixvim";
-    hytale-launcher.url = "github:JPyke3/hytale-launcher-nix";
     noctalia-shell = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
