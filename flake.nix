@@ -32,5 +32,13 @@
         ./hosts/fw13/configuration.nix
       ];
     };
+
+    nixosConfigurations.rig = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = {inherit self inputs;};
+      modules = [
+        ./hosts/rig/configuration.nix
+      ];
+    };
   };
 }
