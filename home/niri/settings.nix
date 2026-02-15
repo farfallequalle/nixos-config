@@ -4,11 +4,10 @@
     package = pkgs.niri-unstable;
     settings = {
       workspaces = {
-        "1-browser" = {name = "browser";};
+        "1-main" = {name = "main";};
         "2-notes" = {name = "notes";};
-        "3-chat" = {name = "chat";};
-        "4-discord" = {name = "discord";};
-        "5" = {name = "5";};
+        "3-vesktop" = {name = "vesktop";};
+        "4-chat" = {name = "chat";};
       };
 
       prefer-no-csd = true;

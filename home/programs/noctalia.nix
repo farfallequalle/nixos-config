@@ -220,9 +220,18 @@
       };
       calendar = {
         cards = [
-          { enabled = true; id = "calendar-header-card"; }
-          { enabled = true; id = "calendar-month-card"; }
-          { enabled = false; id = "weather-card"; }
+          {
+            enabled = true;
+            id = "calendar-header-card";
+          }
+          {
+            enabled = true;
+            id = "calendar-month-card";
+          }
+          {
+            enabled = false;
+            id = "weather-card";
+          }
         ];
       };
       wallpaper = {
@@ -287,25 +296,43 @@
         diskPath = "/";
         shortcuts = {
           left = [
-            { id = "Network"; }
-            { id = "Bluetooth"; }
-            { id = "WallpaperSelector"; }
-            { id = "NoctaliaPerformance"; }
+            {id = "Network";}
+            {id = "Bluetooth";}
+            {id = "WallpaperSelector";}
+            {id = "NoctaliaPerformance";}
           ];
           right = [
-            { id = "Notifications"; }
-            { id = "PowerProfile"; }
-            { id = "KeepAwake"; }
-            { id = "NightLight"; }
+            {id = "Notifications";}
+            {id = "PowerProfile";}
+            {id = "KeepAwake";}
+            {id = "NightLight";}
           ];
         };
         cards = [
-          { enabled = true; id = "profile-card"; }
-          { enabled = true; id = "shortcuts-card"; }
-          { enabled = true; id = "audio-card"; }
-          { enabled = false; id = "brightness-card"; }
-          { enabled = true; id = "weather-card"; }
-          { enabled = true; id = "media-sysmon-card"; }
+          {
+            enabled = true;
+            id = "profile-card";
+          }
+          {
+            enabled = true;
+            id = "shortcuts-card";
+          }
+          {
+            enabled = true;
+            id = "audio-card";
+          }
+          {
+            enabled = false;
+            id = "brightness-card";
+          }
+          {
+            enabled = true;
+            id = "weather-card";
+          }
+          {
+            enabled = true;
+            id = "media-sysmon-card";
+          }
         ];
       };
       systemMonitor = {
@@ -370,12 +397,48 @@
         largeButtonsLayout = "single-row";
         showNumberLabels = true;
         powerOptions = [
-          { action = "lock"; command = ""; countdownEnabled = true; enabled = true; keybind = "1"; }
-          { action = "suspend"; command = ""; countdownEnabled = true; enabled = true; keybind = "2"; }
-          { action = "hibernate"; command = ""; countdownEnabled = true; enabled = false; keybind = "3"; }
-          { action = "reboot"; command = ""; countdownEnabled = true; enabled = true; keybind = "4"; }
-          { action = "logout"; command = ""; countdownEnabled = false; enabled = false; keybind = "5"; }
-          { action = "shutdown"; command = ""; countdownEnabled = true; enabled = true; keybind = "6"; }
+          {
+            action = "lock";
+            command = "";
+            countdownEnabled = true;
+            enabled = true;
+            keybind = "1";
+          }
+          {
+            action = "suspend";
+            command = "";
+            countdownEnabled = true;
+            enabled = true;
+            keybind = "2";
+          }
+          {
+            action = "hibernate";
+            command = "";
+            countdownEnabled = true;
+            enabled = false;
+            keybind = "3";
+          }
+          {
+            action = "reboot";
+            command = "";
+            countdownEnabled = true;
+            enabled = true;
+            keybind = "4";
+          }
+          {
+            action = "logout";
+            command = "";
+            countdownEnabled = false;
+            enabled = false;
+            keybind = "5";
+          }
+          {
+            action = "shutdown";
+            command = "";
+            countdownEnabled = true;
+            enabled = true;
+            keybind = "6";
+          }
         ];
       };
       notifications = {
@@ -412,7 +475,7 @@
         autoHideMs = 2000;
         overlayLayer = true;
         backgroundOpacity = 1;
-        enabledTypes = [ 0 1 2 ];
+        enabledTypes = [0 1 2];
         monitors = [];
       };
       audio = {
@@ -441,13 +504,34 @@
       };
       templates = {
         activeTemplates = [
-          { enabled = true; id = "telegram"; }
-          { enabled = true; id = "gtk"; }
-          { enabled = true; id = "discord"; }
-          { enabled = true; id = "niri"; }
-          { enabled = true; id = "qt"; }
-          { enabled = true; id = "pywalfox"; }
-          { enabled = true; id = "ghostty"; }
+          {
+            enabled = true;
+            id = "telegram";
+          }
+          {
+            enabled = true;
+            id = "gtk";
+          }
+          {
+            enabled = true;
+            id = "discord";
+          }
+          {
+            enabled = true;
+            id = "niri";
+          }
+          {
+            enabled = true;
+            id = "qt";
+          }
+          {
+            enabled = true;
+            id = "pywalfox";
+          }
+          {
+            enabled = true;
+            id = "ghostty";
+          }
         ];
         enableUserTheming = false;
       };

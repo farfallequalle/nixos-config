@@ -13,7 +13,6 @@ in {
     slurp = "${pkgs.slurp}/bin/slurp";
     wl-copy = "${pkgs.wl-clipboard}/bin/wl-copy";
     cliphist = "${pkgs.cliphist}/bin/cliphist";
-    rofi = "${pkgs.rofi}/bin/rofi";
 
     volume-up = spawn pactl ["set-sink-volume" "@DEFAULT_SINK@" "+5%"];
     volume-down = spawn pactl ["set-sink-volume" "@DEFAULT_SINK@" "-5%"];
@@ -29,7 +28,6 @@ in {
 
     screenshot = spawn "sh" ["-c" "${grim} - | ${wl-copy}"];
     screenshot-select = spawn "sh" ["-c" "${grim} -g \"$(${slurp})\" - | ${wl-copy}"];
-    clipboard-history = spawn "sh" ["-c" "${cliphist} list | ${rofi} -dmenu | ${cliphist} decode | ${wl-copy}"];
   in {
     "XF86AudioRaiseVolume".action = volume-up;
     "XF86AudioLowerVolume".action = volume-down;
@@ -51,13 +49,11 @@ in {
 
     "Print".action = screenshot;
     "Shift+Print".action = screenshot-select;
-    "super+v".action = clipboard-history;
-
     "super+q".action = close-window;
     "super+b".action = spawn apps.browser;
     "super+Return".action = spawn apps.terminal;
     "super+E".action = spawn apps.fileManager;
-    "super+Space".action = spawn apps.appLauncher "-show" "drun";
+    "super+Space".action = spawn "noctalia-shell" ["ipc" "call" "launcher" "toggle"];
 
     "super+f".action = maximize-column;
     "super+shift+f".action = fullscreen-window;
@@ -66,8 +62,6 @@ in {
     "super+comma".action = consume-or-expel-window-left;
     "super+period".action = consume-or-expel-window-right;
     "super+p".action = power-off-monitors;
-    "super+alt+l".action = spawn "${pkgs.swaylock}/bin/swaylock";
-
     "super+h".action = focus-column-left;
     "super+l".action = focus-column-right;
     "super+j".action = focus-window-down;
@@ -96,25 +90,25 @@ in {
     "super+Shift+Page_Down".action = move-column-to-workspace-down;
     "super+Shift+Page_Up".action = move-column-to-workspace-up;
 
-    "super+1".action = focus-workspace "browser";
-    "super+2".action = focus-workspace "notes";
-    "super+3".action = focus-workspace "chat";
-    "super+4".action = focus-workspace "discord";
-    "super+5".action = focus-workspace "5";
-    "super+6".action = focus-workspace "6";
-    "super+7".action = focus-workspace "7";
-    "super+8".action = focus-workspace "8";
-    "super+9".action = focus-workspace "9";
+    "super+1".action = focus-workspace 1;
+    "super+2".action = focus-workspace 2;
+    "super+3".action = focus-workspace 3;
+    "super+4".action = focus-workspace 4;
+    "super+5".action = focus-workspace 5;
+    "super+6".action = focus-workspace 6;
+    "super+7".action = focus-workspace 7;
+    "super+8".action = focus-workspace 8;
+    "super+9".action = focus-workspace 9;
 
-    "super+Shift+1".action = {move-column-to-workspace = "browser";};
-    "super+Shift+2".action = {move-column-to-workspace = "notes";};
-    "super+Shift+3".action = {move-column-to-workspace = "chat";};
-    "super+Shift+4".action = {move-column-to-workspace = "discord";};
-    "super+Shift+5".action = {move-column-to-workspace = "5";};
-    "super+Shift+6".action = {move-column-to-workspace = "6";};
-    "super+Shift+7".action = {move-column-to-workspace = "7";};
-    "super+Shift+8".action = {move-column-to-workspace = "8";};
-    "super+Shift+9".action = {move-column-to-workspace = "9";};
+    "super+Shift+1".action = {move-column-to-workspace = 1;};
+    "super+Shift+2".action = {move-column-to-workspace = 2;};
+    "super+Shift+3".action = {move-column-to-workspace = 3;};
+    "super+Shift+4".action = {move-column-to-workspace = 4;};
+    "super+Shift+5".action = {move-column-to-workspace = 5;};
+    "super+Shift+6".action = {move-column-to-workspace = 6;};
+    "super+Shift+7".action = {move-column-to-workspace = 7;};
+    "super+Shift+8".action = {move-column-to-workspace = 8;};
+    "super+Shift+9".action = {move-column-to-workspace = 9;};
 
     "super+r".action = switch-preset-column-width;
   };

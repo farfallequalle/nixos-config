@@ -11,7 +11,7 @@
         matches = [
           {app-id = "firefox";}
         ];
-        open-on-workspace = "browser";
+        open-on-workspace = "main";
         open-maximized = true;
       }
 
@@ -36,7 +36,7 @@
         matches = [
           {app-id = "vesktop";}
         ];
-        open-on-workspace = "discord";
+        open-on-workspace = "vesktop";
         open-focused = false;
         open-maximized = true;
       }
