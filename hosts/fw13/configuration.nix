@@ -45,8 +45,14 @@
   programs.dconf.enable = true;
 
   services.fprintd.enable = true;
+  security.pam.services.sudo.fprintAuth = true;
+  security.pam.services.login.fprintAuth = true;
   services.fwupd.enable = true;
   services.upower.enable = true;
+
+  hardware.sensor.iio.enable = true;
+  boot.kernelParams = [ "amdgpu.sg_display=0" ];
+  hardware.amdgpu.initrd.enable = true;
 
   services.xserver.xkb = {
     layout = "de";
