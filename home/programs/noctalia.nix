@@ -381,7 +381,7 @@
         bluetoothHideUnnamedDevices = false;
       };
       sessionMenu = {
-        enableCountdown = true;
+        enableCountdown = false;
         countdownDuration = 10000;
         position = "center";
         showHeader = true;
@@ -528,13 +528,13 @@
         enableUserTheming = false;
       };
       nightLight = {
-        enabled = false;
+        enabled = true;
         forced = false;
-        autoSchedule = true;
+        autoSchedule = false;
         nightTemp = "4000";
         dayTemp = "6500";
-        manualSunrise = "06:30";
-        manualSunset = "18:30";
+        manualSunrise = "06:00";
+        manualSunset = "21:00";
       };
       hooks = {
         enabled = false;

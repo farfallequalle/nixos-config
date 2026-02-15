@@ -8,5 +8,6 @@
     nerd-fonts.jetbrains-mono
     inter
     noto-fonts
+    ani-cli
   ];
 }
