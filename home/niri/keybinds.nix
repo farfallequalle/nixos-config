@@ -52,7 +52,7 @@ in {
     "super+q".action = close-window;
     "super+b".action = spawn apps.browser;
     "super+Return".action = spawn apps.terminal;
-    "super+E".action = spawn apps.fileManager;
+    "super+E".action = spawn apps.terminal ["-e" "yazi"];
     "super+Space".action = spawn "noctalia-shell" ["ipc" "call" "launcher" "toggle"];
 
     "super+f".action = maximize-column;

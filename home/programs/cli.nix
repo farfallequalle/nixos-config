@@ -13,6 +13,12 @@
     enableZshIntegration = true;
   };
 
+  programs.yazi = {
+    enable = true;
+    enableZshIntegration = true;
+    shellWrapperName = "y";
+  };
+
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;

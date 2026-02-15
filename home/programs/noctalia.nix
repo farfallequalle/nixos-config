@@ -94,7 +94,7 @@
               followFocusedScreen = true;
               groupedBorderOpacity = 1;
               hideUnoccupied = true;
-              iconScale = 0.9;
+              iconScale = 1.0;
               id = "Workspace";
               labelMode = "index";
               occupiedColor = "secondary";
