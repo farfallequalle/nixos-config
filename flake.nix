@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "NixOS config for fw13 + rig";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -7,7 +7,10 @@
     niri.url = "github:sodiboo/niri-flake";
     nur.url = "github:nix-community/NUR";
     claude-code.url = "github:sadjow/claude-code-nix";
-    nixvim.url = "github:nix-community/nixvim";
+    nixvim-config = {
+      url = "github:vaultgoblin64/nixvim-config";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     noctalia-shell = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,12 +20,6 @@
   outputs = {
     self,
     nixpkgs,
-    # home-manager,
-    # niri,
-    # nur,
-    # claude-code,
-    # stylix,
-    # nixvim,
     ...
   } @ inputs: {
     nixosConfigurations.fw13 = nixpkgs.lib.nixosSystem {

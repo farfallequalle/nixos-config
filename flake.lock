@@ -22,6 +22,7 @@
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
+          "nixvim-config",
           "nixvim",
           "nixpkgs"
         ]
@@ -285,6 +286,27 @@
         "type": "github"
       }
     },
+    "nixvim-config": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nixvim": "nixvim"
+      },
+      "locked": {
+        "lastModified": 1771184142,
+        "narHash": "sha256-30yn83y0R+Y7bppluXHgKcSjXxAisZrSFU5ba22OKgY=",
+        "owner": "vaultgoblin64",
+        "repo": "nixvim-config",
+        "rev": "6b0a3a05a822a2fa4ada6dc92d3bf3855566a53c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vaultgoblin64",
+        "repo": "nixvim-config",
+        "type": "github"
+      }
+    },
     "noctalia-shell": {
       "inputs": {
         "nixpkgs": [
@@ -330,7 +352,7 @@
         "home-manager": "home-manager",
         "niri": "niri",
         "nixpkgs": "nixpkgs_4",
-        "nixvim": "nixvim",
+        "nixvim-config": "nixvim-config",
         "noctalia-shell": "noctalia-shell",
         "nur": "nur"
       }
