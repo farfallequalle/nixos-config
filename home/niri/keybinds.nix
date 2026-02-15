@@ -62,6 +62,7 @@ in {
     "super+comma".action = consume-or-expel-window-left;
     "super+period".action = consume-or-expel-window-right;
     "super+p".action = power-off-monitors;
+    "super+alt+l".action = spawn "noctalia-shell" ["ipc" "call" "lockScreen" "lock"];
     "super+h".action = focus-column-left;
     "super+l".action = focus-column-right;
     "super+j".action = focus-window-down;

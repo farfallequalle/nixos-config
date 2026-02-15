@@ -146,14 +146,6 @@
               id = "Brightness";
               textColor = "none";
             }
-            {
-              icon = "rocket";
-              iconColor = "none";
-              id = "Launcher";
-            }
-            {
-              id = "plugin:keybind-cheatsheet";
-            }
           ];
         };
         screenOverrides = [];
@@ -168,7 +160,7 @@
         iRadiusRatio = 1;
         boxRadiusRatio = 1;
         screenRadiusRatio = 1;
-        animationSpeed = 1;
+        animationSpeed = 2;
         animationDisabled = false;
         compactLockScreen = false;
         lockOnSuspend = true;
