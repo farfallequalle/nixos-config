@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    zapzap
+    whatsapp-electron
     telegram-desktop
     claude-code
     seafile-client

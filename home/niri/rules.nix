@@ -18,7 +18,7 @@
       {
         matches = [
           {app-id = "org.telegram.desktop";}
-          {app-id = "zapzap";}
+          {app-id = "whatsapp-electron";}
         ];
         open-on-workspace = "chat";
         open-focused = false;
