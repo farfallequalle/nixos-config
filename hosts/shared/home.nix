@@ -1,7 +1,7 @@
-{ hostname }:
 {
   config,
   pkgs,
+  hostname,
   ...
 }: {
   home.username = "farfallequalle";
@@ -14,6 +14,7 @@
     ../../home/programs/ghostty.nix
     ../../home/programs/git.nix
     ../../home/programs/zsh.nix
+    ../../home/programs/starship.nix
     ../../home/programs/cli.nix
     ../../home/programs/noctalia.nix
     ../../home/programs/claude.nix

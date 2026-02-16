@@ -1,4 +1,4 @@
-{...}: {
+{hostname, lib, ...}: {
   programs.noctalia-shell = {
     enable = true;
     settings = {
@@ -91,7 +91,7 @@
               emptyColor = "secondary";
               enableScrollWheel = false;
               focusedColor = "primary";
-              followFocusedScreen = true;
+              followFocusedScreen = false;
               groupedBorderOpacity = 1;
               hideUnoccupied = true;
               iconScale = 1.0;
@@ -124,6 +124,7 @@
               showUnreadBadge = true;
               unreadBadgeColor = "primary";
             }
+          ] ++ lib.optionals (hostname != "rig") [
             {
               deviceNativePath = "__default__";
               displayMode = "graphic-clean";
@@ -133,6 +134,7 @@
               showNoctaliaPerformance = false;
               showPowerProfiles = false;
             }
+          ] ++ [
             {
               displayMode = "onhover";
               iconColor = "none";
@@ -140,6 +142,7 @@
               middleClickCommand = "pwvucontrol || pavucontrol";
               textColor = "none";
             }
+          ] ++ lib.optionals (hostname != "rig") [
             {
               displayMode = "onhover";
               iconColor = "none";
@@ -227,7 +230,7 @@
         ];
       };
       wallpaper = {
-        enabled = true;
+        enabled = hostname != "rig";
         overviewEnabled = false;
         directory = "/home/farfallequalle/nixos-config/wallpapers";
         monitorDirectories = [];

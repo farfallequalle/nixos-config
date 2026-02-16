@@ -9,5 +9,6 @@
     inter
     noto-fonts
     ani-cli
+    pywalfox-native
   ];
 }

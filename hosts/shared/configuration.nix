@@ -11,6 +11,7 @@
   imports = [
     "${self}/system/greeter/greetd.nix"
     "${self}/system/programs/steam.nix"
+    "${self}/system/graphics.nix"
     "${self}/system/packages.nix"
     "${self}/system/xdg.nix"
     "${self}/system/bluetooth.nix"
@@ -108,13 +109,13 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "backup";
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit inputs hostname; };
     sharedModules = [
       inputs.nixvim-config.homeModules.default
       inputs.noctalia-shell.homeModules.default
     ];
     users = {
-      "farfallequalle" = import ./home.nix { inherit hostname; };
+      "farfallequalle" = import ./home.nix;
     };
   };
 

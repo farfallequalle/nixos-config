@@ -54,6 +54,45 @@
 
           # Remove the "Firefox View" button/tab
           "browser.tabs.firefox-view" = false;
+          "browser.tabs.firefox-view-next" = false;
+
+          # Toolbar layout: pin Bitwarden, other extensions in overflow
+          "browser.uiCustomization.state" = builtins.toJSON {
+            placements = {
+              widget-overflow-fixed-list = [];
+              unified-extensions-area = [
+                "uBlock0_raymondhill_net-browser-action"
+                "addon_darkreader_org-browser-action"
+                "sponsorBlocker_ajay_app-browser-action"
+                "pywalfox_themusic_tech-browser-action"
+              ];
+              nav-bar = [
+                "back-button"
+                "forward-button"
+                "stop-reload-button"
+                "customizableui-special-spring1"
+                "urlbar-container"
+                "customizableui-special-spring2"
+                "downloads-button"
+                "_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action"
+                "unified-extensions-button"
+              ];
+              toolbar-menubar = ["menubar-items"];
+              TabsToolbar = ["tabbrowser-tabs" "new-tab-button" "alltabs-button"];
+              PersonalToolbar = ["personal-bookmarks"];
+            };
+            seen = [
+              "developer-button"
+              "_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action"
+              "uBlock0_raymondhill_net-browser-action"
+              "addon_darkreader_org-browser-action"
+              "sponsorBlocker_ajay_app-browser-action"
+              "pywalfox_themusic_tech-browser-action"
+            ];
+            dirtyAreaCache = ["nav-bar" "unified-extensions-area" "TabsToolbar"];
+            currentVersion = 20;
+            newElementCount = 5;
+          };
 
           # Disable Pocket integration (saves articles to Firefox Account)
           "extensions.pocket.enabled" = false;

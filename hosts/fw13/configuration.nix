@@ -9,13 +9,17 @@
 {
   imports = [
     ./hardware-configuration.nix
-    (import ../shared/configuration.nix { hostname = "fw13"; })
+    (import ../shared/configuration.nix {hostname = "fw13";})
     "${self}/system/programs/power.nix"
+  ];
+
+  home-manager.users.farfallequalle.imports = [
+    ../../home/niri/fw13.nix
   ];
 
   services.fwupd.enable = true;
   services.upower.enable = true;
   hardware.sensor.iio.enable = true;
-  boot.kernelParams = [ "amdgpu.sg_display=0" ];
+  boot.kernelParams = ["amdgpu.sg_display=0"];
   hardware.amdgpu.initrd.enable = true;
 }

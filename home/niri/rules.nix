@@ -1,8 +1,4 @@
-{
-  # config,
-  # pkgs,
-  ...
-}: {
+{...}: {
   programs.niri.settings = {
     layer-rules = [];
 
@@ -13,6 +9,13 @@
         ];
         open-on-workspace = "main";
         open-maximized = true;
+      }
+
+      {
+        matches = [
+          {app-id = "com.mitchellh.ghostty";}
+        ];
+        open-on-workspace = "main";
       }
 
       {
@@ -41,6 +44,31 @@
         open-maximized = true;
       }
 
+      # Steam notification toasts
+      {
+        matches = [
+          {
+            app-id = "^steam$";
+            title = "^notificationtoasts_";
+          }
+        ];
+        open-floating = true;
+        default-floating-position = {
+          x = 10;
+          y = 10;
+          relative-to = "bottom-right";
+        };
+      }
+
+      # Steam games
+      {
+        matches = [
+          {app-id = "^steam_app_";}
+        ];
+        open-maximized = true;
+      }
+
+      # Global corner radius
       {
         matches = [{}];
         geometry-corner-radius = {
