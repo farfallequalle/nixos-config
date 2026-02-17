@@ -114,7 +114,7 @@
               drawerEnabled = true;
               hidePassive = true;
               id = "Tray";
-              pinned = [];
+              pinned = ["TelegramDesktop"];
             }
             {
               hideWhenZero = true;
