@@ -60,7 +60,7 @@
         matches = [
           {app-id = "^steam_app_";}
         ];
-        open-on-workspace = "3";
+        open-on-workspace = "main";
         open-maximized = true;
       }
 

@@ -36,7 +36,9 @@ in {
     "Print".action = screenshot;
     "Print".hotkey-overlay.title = "Screenshot";
     "Shift+Print".action = screenshot-select;
-    "Shift+Print".hotkey-overlay.title = "Screenshot (Auswahl)";
+    "Shift+Print".hotkey-overlay.hidden = true;
+    "super+Shift+S".action = screenshot-select;
+    "super+Shift+S".hotkey-overlay.title = "Screenshot (Auswahl)";
 
     "super+q".action = close-window;
     "super+b".action = spawn apps.browser;
