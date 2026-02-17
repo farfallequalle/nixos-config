@@ -418,7 +418,7 @@
             command = "";
             countdownEnabled = true;
             enabled = true;
-            keybind = "4";
+            keybind = "3";
           }
           {
             action = "logout";
@@ -432,7 +432,7 @@
             command = "";
             countdownEnabled = true;
             enabled = true;
-            keybind = "6";
+            keybind = "4";
           }
         ];
       };
