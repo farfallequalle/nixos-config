@@ -37,6 +37,9 @@ pkgs.writeShellScript "stack-social" ''
 
       # Set the stacked column to full width
       $niri msg action set-column-width "100%"
+
+      # Return focus to main workspace
+      $niri msg action focus-workspace "main"
       exit 0
     fi
     sleep 1
