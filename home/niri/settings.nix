@@ -3,6 +3,7 @@
     enable = true;
     package = pkgs.niri-unstable;
     settings = {
+      gestures.hot-corners.enable = false;
       workspaces = {
         "1-main" = {name = "main";};
         "2-notes" = {name = "notes";};
@@ -36,6 +37,8 @@
 
       input = {
         keyboard.xkb.layout = "de";
+        mouse.accel-speed = 0.2;
+        mouse.accel-profile = "flat";
         focus-follows-mouse.enable = true;
         warp-mouse-to-focus.enable = false;
       };
@@ -54,6 +57,7 @@
         QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
         ELECTRON_OZONE_PLATFORM_HINT = "auto";
 
+        FILE_MANAGER = "caja";
         XDG_SESSION_TYPE = "wayland";
         XDG_CURRENT_DESKTOP = "niri";
         DISPLAY = ":0";

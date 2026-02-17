@@ -52,6 +52,7 @@
             title = "^notificationtoasts_";
           }
         ];
+        open-focused = false;
         open-floating = true;
         default-floating-position = {
           x = 10;
@@ -65,6 +66,7 @@
         matches = [
           {app-id = "^steam_app_";}
         ];
+        open-on-workspace = "3";
         open-maximized = true;
       }
 

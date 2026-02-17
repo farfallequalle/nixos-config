@@ -21,6 +21,12 @@
   ];
 
   xdg.portal.enable = true;
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "inode/directory" = "caja.desktop";
+    };
+  };
   programs.nh = {
     enable = true;
     flake = "/home/farfallequalle/nixos-config";
