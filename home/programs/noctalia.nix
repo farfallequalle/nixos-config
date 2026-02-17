@@ -55,7 +55,7 @@
               showDiskAvailable = false;
               showDiskUsage = false;
               showDiskUsageAsPercent = false;
-              showGpuTemp = false;
+              showGpuTemp = true;
               showLoadAverage = false;
               showMemoryAsPercent = false;
               showMemoryUsage = true;

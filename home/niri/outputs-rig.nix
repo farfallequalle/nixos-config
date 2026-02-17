@@ -17,9 +17,10 @@
       mode = {
         width = 2560;
         height = 1440;
-        refresh = 59.951;
+        refresh = 180.0;
       };
       scale = 1.0;
+      variable-refresh-rate = true;
       position = {
         x = 1080;
         y = 0;

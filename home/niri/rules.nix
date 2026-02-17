@@ -11,12 +11,6 @@
         open-maximized = true;
       }
 
-      {
-        matches = [
-          {app-id = "com.mitchellh.ghostty";}
-        ];
-        open-on-workspace = "main";
-      }
 
       {
         matches = [
