@@ -349,7 +349,7 @@
         batteryCriticalThreshold = 5;
         cpuPollingInterval = 1000;
         gpuPollingInterval = 3000;
-        enableDgpuMonitoring = false;
+        enableDgpuMonitoring = true;
         memPollingInterval = 1000;
         diskPollingInterval = 30000;
         networkPollingInterval = 1000;
