@@ -175,7 +175,7 @@
         shadowOffsetY = 3;
         language = "";
         allowPanelsOnScreenWithoutBar = true;
-        showChangelogOnStartup = true;
+        showChangelogOnStartup = false;
         telemetryEnabled = false;
         enableLockScreenCountdown = true;
         lockScreenCountdownDuration = 10000;
@@ -274,7 +274,7 @@
         pinnedApps = [];
         useApp2Unit = false;
         sortByMostUsed = true;
-        terminalCommand = "alacritty -e";
+        terminalCommand = "ghostty -e";
         customLaunchPrefixEnabled = false;
         customLaunchPrefix = "";
         viewMode = "list";

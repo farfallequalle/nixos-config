@@ -38,7 +38,7 @@ in {
     "Shift+Print".action = screenshot-select;
     "Shift+Print".hotkey-overlay.hidden = true;
     "super+Shift+S".action = screenshot-select;
-    "super+Shift+S".hotkey-overlay.title = "Screenshot (Auswahl)";
+    "super+Shift+S".hotkey-overlay.title = "Screenshot (Selection)";
 
     "super+q".action = close-window;
     "super+b".action = spawn apps.browser;
@@ -46,7 +46,7 @@ in {
     "super+Return".action = spawn apps.terminal;
     "super+Return".hotkey-overlay.title = "Terminal";
     "super+E".action = spawn apps.terminal ["-e" "yazi"];
-    "super+E".hotkey-overlay.title = "Dateimanager (Yazi)";
+    "super+E".hotkey-overlay.title = "File Manager (Yazi)";
     "super+Space".action = spawn "noctalia-shell" ["ipc" "call" "launcher" "toggle"];
     "super+Space".hotkey-overlay.title = "App Launcher";
 
@@ -58,7 +58,7 @@ in {
     "super+period".action = consume-or-expel-window-right;
     "super+p".action = power-off-monitors;
     "super+alt+l".action = spawn "noctalia-shell" ["ipc" "call" "lockScreen" "lock"];
-    "super+alt+l".hotkey-overlay.title = "Bildschirm sperren";
+    "super+alt+l".hotkey-overlay.title = "Lock Screen";
     "super+x".action = spawn "noctalia-shell" ["ipc" "call" "sessionMenu" "toggle"];
     "super+x".hotkey-overlay.title = "Session-Menu";
     "super+h".action = focus-column-left;
