@@ -14,11 +14,19 @@
 
       {
         matches = [
-          {app-id = "org.telegram.desktop";}
-          {app-id = "whatsapp-electron";}
           {app-id = "vesktop";}
         ];
-        open-on-workspace = "social";
+        open-on-workspace = "vesktop";
+        open-focused = false;
+        open-maximized = true;
+      }
+
+      {
+        matches = [
+          {app-id = "org.telegram.desktop";}
+          {app-id = "whatsapp-electron";}
+        ];
+        open-on-workspace = "chat";
         open-focused = false;
       }
 

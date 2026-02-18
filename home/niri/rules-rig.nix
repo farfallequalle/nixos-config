@@ -7,7 +7,6 @@
         {app-id = "whatsapp-electron";}
       ];
       open-on-workspace = "social";
-      open-focused = false;
     }
   ];
 }

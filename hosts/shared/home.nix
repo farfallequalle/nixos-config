@@ -7,6 +7,12 @@
   home.username = "farfallequalle";
   home.homeDirectory = "/home/farfallequalle";
 
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+    PAGER = "less";
+  };
+
   imports = [
     ./packages.nix
     ../../home/niri/default.nix
@@ -55,7 +61,7 @@
   };
 
   programs.zsh.shellAliases = {
-    nrs = "git -C ~/nixos-config add . && nh os switch -H ${hostname}";
+    nrs = "git -C ~/nixos-config add . && nh os switch -H ${hostname} && { pkill quickshell; sleep 1; noctalia-shell & disown; }";
     host = "nvim ~/nixos-config/hosts/${hostname}";
     home = "nvim ~/nixos-config/home";
     flake = "nvim ~/nixos-config/flake.nix";
