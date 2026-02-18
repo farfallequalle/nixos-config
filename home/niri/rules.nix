@@ -16,8 +16,9 @@
         matches = [
           {app-id = "org.telegram.desktop";}
           {app-id = "whatsapp-electron";}
+          {app-id = "vesktop";}
         ];
-        open-on-workspace = "chat";
+        open-on-workspace = "social";
         open-focused = false;
       }
 
@@ -29,16 +30,16 @@
         open-maximized = true;
       }
 
+      # Steam windows: prevent floating by default
       {
         matches = [
-          {app-id = "vesktop";}
+          {app-id = "^steam$";}
         ];
-        open-on-workspace = "vesktop";
+        open-floating = false;
         open-focused = false;
-        open-maximized = true;
       }
 
-      # Steam notification toasts
+      # Steam notification toasts (overrides above)
       {
         matches = [
           {
