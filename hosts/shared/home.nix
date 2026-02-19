@@ -24,6 +24,7 @@
     ../../home/programs/cli.nix
     ../../home/programs/noctalia.nix
     ../../home/programs/claude.nix
+    ../../home/programs/nrs.nix
   ];
 
   xdg.portal.enable = true;
@@ -48,6 +49,10 @@
 
   gtk = {
     enable = true;
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
     theme = {
       name = "adw-gtk3-dark";
       package = pkgs.adw-gtk3;
@@ -61,7 +66,6 @@
   };
 
   programs.zsh.shellAliases = {
-    nrs = "git -C ~/nixos-config add . && nh os switch -H ${hostname} && { pkill quickshell; sleep 1; noctalia-shell & disown; }";
     host = "nvim ~/nixos-config/hosts/${hostname}";
     home = "nvim ~/nixos-config/home";
     flake = "nvim ~/nixos-config/flake.nix";

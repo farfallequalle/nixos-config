@@ -1,7 +1,5 @@
 {...}: {
   programs.niri.settings = {
-    layer-rules = [];
-
     window-rules = [
       {
         matches = [

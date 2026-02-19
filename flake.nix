@@ -3,7 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     niri.url = "github:sodiboo/niri-flake";
     nur.url = "github:nix-community/NUR";
     claude-code.url = "github:sadjow/claude-code-nix";

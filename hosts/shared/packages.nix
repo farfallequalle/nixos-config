@@ -5,7 +5,7 @@
     claude-code
     seafile-client
     obsidian
-    mate.caja
+    caja
     nerd-fonts.jetbrains-mono
     inter
     noto-fonts

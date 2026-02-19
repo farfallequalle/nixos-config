@@ -1,4 +1,4 @@
-{hostname, lib, ...}: {
+{hostname, lib, self, ...}: {
   programs.noctalia-shell = {
     enable = true;
     settings = {
@@ -154,7 +154,7 @@
         screenOverrides = [];
       };
       general = {
-        avatarImage = "/home/farfallequalle/nixos-config/wallpapers/farfallequalle.jpg";
+        avatarImage = "${self}/wallpapers/farfallequalle.jpg";
         dimmerOpacity = 0.2;
         showScreenCorners = false;
         forceBlackScreenCorners = false;
@@ -232,7 +232,7 @@
       wallpaper = {
         enabled = hostname != "rig";
         overviewEnabled = false;
-        directory = "/home/farfallequalle/nixos-config/wallpapers";
+        directory = "${self}/wallpapers";
         monitorDirectories = [];
         enableMultiMonitorDirectories = false;
         showHiddenFiles = false;

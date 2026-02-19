@@ -6,23 +6,17 @@
   apps = import ./applications.nix {inherit pkgs;};
 in {
   programs.niri.settings.binds = with config.lib.niri.actions; let
-    pactl = "${pkgs.pulseaudio}/bin/pactl";
-    playerctl = "${pkgs.playerctl}/bin/playerctl";
-    grim = "${pkgs.grim}/bin/grim";
-    slurp = "${pkgs.slurp}/bin/slurp";
-    wl-copy = "${pkgs.wl-clipboard}/bin/wl-copy";
+    volume-up = spawn apps.pactl ["set-sink-volume" "@DEFAULT_SINK@" "+5%"];
+    volume-down = spawn apps.pactl ["set-sink-volume" "@DEFAULT_SINK@" "-5%"];
+    volume-mute = spawn apps.pactl ["set-sink-mute" "@DEFAULT_SINK@" "toggle"];
+    mic-mute = spawn apps.pactl ["set-source-mute" "@DEFAULT_SOURCE@" "toggle"];
 
-    volume-up = spawn pactl ["set-sink-volume" "@DEFAULT_SINK@" "+5%"];
-    volume-down = spawn pactl ["set-sink-volume" "@DEFAULT_SINK@" "-5%"];
-    volume-mute = spawn pactl ["set-sink-mute" "@DEFAULT_SINK@" "toggle"];
-    mic-mute = spawn pactl ["set-source-mute" "@DEFAULT_SOURCE@" "toggle"];
+    media-play = spawn apps.playerctl ["play-pause"];
+    media-next = spawn apps.playerctl ["next"];
+    media-prev = spawn apps.playerctl ["previous"];
 
-    media-play = spawn playerctl ["play-pause"];
-    media-next = spawn playerctl ["next"];
-    media-prev = spawn playerctl ["previous"];
-
-    screenshot = spawn "sh" ["-c" "${grim} - | ${wl-copy}"];
-    screenshot-select = spawn "sh" ["-c" "${grim} -g \"$(${slurp})\" - | ${wl-copy}"];
+    screenshot = spawn "sh" ["-c" "${apps.grim} - | ${apps.wl-copy}"];
+    screenshot-select = spawn "sh" ["-c" "${apps.grim} -g \"$(${apps.slurp})\" - | ${apps.wl-copy}"];
   in {
     "XF86AudioRaiseVolume".action = volume-up;
     "XF86AudioLowerVolume".action = volume-down;
