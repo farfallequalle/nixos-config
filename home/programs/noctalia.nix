@@ -5,7 +5,7 @@
       settingsVersion = 48;
       bar = {
         barType = "simple";
-        position = "left";
+        position = if hostname == "rig" then "top" else "left";
         monitors = [];
         density = "comfortable";
         showOutline = false;

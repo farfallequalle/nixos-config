@@ -17,6 +17,7 @@
     "${self}/system/bluetooth.nix"
     "${self}/system/audio.nix"
     inputs.home-manager.nixosModules.default
+    inputs.nix-flatpak.nixosModules.nix-flatpak
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -87,6 +88,16 @@
     substituters = [ "https://niri.cachix.org" ];
     trusted-public-keys = [ "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964=" ];
   };
+
+  services.flatpak = {
+    enable = true;
+    packages = [
+      "com.bambulab.BambuStudio"
+    ];
+  };
+
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  environment.sessionVariables.XDG_DATA_DIRS = ["/var/lib/flatpak/exports/share"];
 
   environment.systemPackages = with pkgs; [
     tree
